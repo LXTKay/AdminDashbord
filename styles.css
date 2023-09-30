@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  
+  display:grid;
+  grid-template-columns: minmax(300px, 1fr) 5fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+
+.dashboard{
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  padding: 2rem;
+  padding-top: 0;
+
+  grid-area: dashboard;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 6rem repeat(11, 2rem);
+  gap: 1rem;
+}
+
+.title img{
+  width: 3rem;
+  height: 3rem;
+  padding: 10px;
+  padding-left: 0px;
+}
+
+.boarditem img{
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 10px;
+}
+
+.title{
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.boarditem{
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.boarditem:hover{
+  cursor: pointer;
+}
+
+.icon{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.main{
+  background-color: gainsboro;
+  grid-area: main;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.searchbar{
+  background-color: white;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.searchbarLeft{
+  display: flex;
+  align-items: center;
+  flex: 3;
+  padding: 1rem 3rem;
+}
+
+.icon2{
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 10px;
+}
+
+#search{
+  width: max(20rem, 90%);
+  height: 2rem;
+  background-color: gainsboro;
+  border-radius: 2rem;
+  border-style: none;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+.searchbarRight{
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+  gap: 1rem;
+}
+
+.minipic{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.usernameCorner{
+  min-width: fit-content;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0.5rem;
+}
+
+.actionbar{
+  height: 6rem;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr minmax(375px, 1fr);
+  grid-template-areas: "name butt";
+
+  padding: 0 3rem;
+  box-shadow: 1px 5px 5px gray;
+}
+
+.nameSection{
+  grid-area: name;
+
+  display: flex;
+  align-items: center;
+}
+
+.bigpic{
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 15px;
+}
+
+.nameBox{
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.greeting{
+  font-size: small;
+}
+
+.name{
+  font-size: large;
+}
+
+.buttSection{
+  grid-area: butt;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  align-items: center;
+  justify-items: center;
+}
+
+.butt{
+  background-color: blue;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 2.5rem;
+  width: 6rem;
+}
+
+
+.contentbox{
+  height: 100%;
+  
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr 8fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: 
+    "projectsH announcementsH"
+    "projects announcements"
+    "projects trendingH"
+    "projects trending";
+
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+h2{
+  align-self: self-end;
+}
+
+.projectsH{
+  grid-area: projectsH;
+}
+
+.projects{
+  grid-area: projects;
+
+  display: grid;
+  grid-template-rows: repeat(2, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+
+.card{
+  background-color: white;
+
+  border-radius: 0.5rem;
+  border-left: 0.5rem solid orange;
+  padding: 1.5rem;
+  box-shadow: 1px 5px 5px gray;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeadline{
+  font-weight: bold;
+  font-size: large;
+  padding-top: 1rem;
+}
+
+.cardText{
+  color: darkslategray;
+}
+
+.cardFooter{
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.announcementsH{
+  grid-area: announcementsH;
+}
+
+.announcements{
+  grid-area: announcements;
+
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 1px 5px 5px gray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ann{
+  padding: 1rem;
+}
+
+.annText{
+  font-size: small;
+  color: darkslategray;
+}
+
+hr{
+  border-top: 1px solid #bbb;
+  width: 90%;
+}
+
+.trendingH{
+  grid-area: trendingH;
+}
+
+.trending{
+  grid-area: trending;
+
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 1px 5px 5px gray;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trend{
+  display: flex;
+  align-items: center;
+}
+
+.trendInfo{
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.at{
+  font-weight: bold;
+}
+
+.motto{
+  color: darkslategray;
+}
